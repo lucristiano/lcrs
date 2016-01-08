@@ -8,59 +8,32 @@
 		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link href="https://file.myfontastic.com/aqybsEq5nF35NPTYcvXw9a/icons.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="js/modernizr.custom.js"></script>
-		<script src="js/page-transition.js"></script>
+		<script>
+    $(function(){
+      $("#include-all").load("all.html");
+    });
+    </script>
 		<meta charset="utf-8">
 	</head>
 
-	<body id="holder" onload="start()" onresize="resize()" onorientationchange="resize()" onmousedown="context.fillStyle='rgba(255,255,255,'+opacity+')'" onmouseup="context.fillStyle='rgb(255,255,255)'">
+	<body>
 
-		<div class="overlay overlay-hugeinc">
-			<a class="icon-cancel"></a>
-			<nav>
-				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="work.html">Work</a></li>
-					<li><a href="#">Contact</a></li>
-				</ul>
-			</nav>
-		</div>
+		<!-- Include Header and Menu -->
+		<div id="include-all"></div>
 
-		<header>
-			<div class="frame-top">
-					<a href="index-2.html"><div class="logo">
-						<p class="top">LC</p>
-						<p class="bottom">RS</p>
-					</div>
-					</a>
-				<div class="menu-btn" id="trigger-overlay">
-					<a href="#" class="icon-menu">
-					</a>
-				</div>
-			</div>
-
-			<div class="frame-left">
-			</div>
-
-			<div class="frame-right">
-			</div>
-			<div class="frame-bottom">
-			</div>
-		</header>
-
+		<!-- Content -->
 		<div class="copy">
 			<p class="light-text">Hi, my name is Cris</p>
 			<p>I'm a <span class="text-white">web designer<span></p>
 			<p>based in São Paulo</p>
 		</div>
 
-		<div class="starfield"></div>
+		<div class="starfield">
+		</div>
 
-		<script src="js/classie.js"></script>
-		<script src="js/demo1.js"></script>
-		<script src="js/starfield.js"></script>
 	</body>
 
+	<!-- Scripts -->
+	<script src="js/starfield.js"></script>
 
 </html>

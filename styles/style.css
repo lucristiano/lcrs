@@ -137,89 +137,51 @@ h3 {
 
 /* Menu */
 
-.icon-menu::before {
-  color: #000;
-  -webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-ms-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
-
-.icon-menu:hover.icon-menu::before {
-  color: #3e19fc;
-}
-
-.icon-cancel::before {
+.menu-overlay {
+  background-color: rgba(0, 0, 0, 0.9);
   color: #fff;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.icon-cancel:hover.icon-cancel::before {
-  color: #3e19fc;
-}
-
-.menu-btn {
-    float: right;
-    font-size: 27px;
-    height: 60px;
-    margin-right: 60px;
-    padding-top: 16px;
-    text-align: right;
-    width: 60px;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: none;
 }
 
 .icon-cancel {
+    color: #fff;
     float: right;
-    height: 60px;
-    position: relative;
-    width: 60px;
-    font-size: 27px;
-    padding-top: 16px;
+    font-size: 1.5em;
     margin-right: 60px;
-    text-align: right;
+    padding-top: 20px;
     cursor: pointer;
-    color: #fff;
 }
 
-.menu-btn-close {
- position: absolute;
- line-height: 60px;
- left: 0;
- top: 50%;
- width: 60px;
+.icon-menu {
+    float: right;
+    font-size: 1.5em;
+    margin-right: 60px;
+    padding-top: 16px;
 }
 
-.menu-overlay {
-    background-color: rgba(0, 0, 0, 0.95);
-    color: #fff;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: 9000;
-}
-
-.menu-itens {
+.menu {
+    float: left;
     font-size: 50px;
-    font-weight: bold;
-    left: 50%;
-    list-style: outside none none;
-    margin-left: -100px;
-    margin-top: -150px;
+    margin-top: -172px;
     position: absolute;
+    text-align: center;
     top: 50%;
+    width: 100%;
 }
 
-.overlay li a {
- display: block;
- position: relative;
- text-transform: lowercase;
+.menu a {
+  color: #fff;
+  position: relative;
+  font-weight: 900;
 }
 
-.overlay li a::before {
+.menu a::before {
  background-color: #3e19fc;
  content: "";
  height: 10px;
@@ -234,121 +196,32 @@ h3 {
  transition: all 0.2s ease;
 }
 
-.overlay li a:hover::before {
- width: 100%;
+.menu a:hover::before {
+ width: 98%;
 }
 
-/* Menu Overlay */
-
-.overlay {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(0,0,0,0.9);
+.menu-itens {
+  opacity: 0.0;
+  position: relative;
+  visibility: hidden;
 }
 
-/* Overlay closing cross */
-.overlay .overlay-close {
-	width: 80px;
-	height: 80px;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	overflow: hidden;
-	border: none;
-	text-indent: 200%;
-	color: transparent;
-	outline: none;
-	z-index: 100;
+.icon-menu:hover::before {
+  color: #3e19fc;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-/* Menu style */
-.overlay nav {
-    font-size: 50px;
-    left: 50%;
-    margin-left: -100px;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.overlay ul {
-	list-style: none;
-	padding: 0;
-	margin: 0 auto;
-	display: inline-block;
-	height: 100%;
-	position: relative;
-}
-
-.overlay ul li {
-	display: block;
-	height: 20%;
-	height: calc(100% / 5);
-	min-height: 54px;
-}
-
-.overlay ul li a {
-	font-weight: bold;
-	display: block;
-	color: #fff;
-	-webkit-transition: color 0.2s;
-	transition: color 0.2s;
-}
-
-
-/* Effects */
-.overlay-hugeinc {
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: opacity 0.5s, visibility 0s 0.5s;
-	transition: opacity 0.5s, visibility 0s 0.5s;
-}
-
-.overlay-hugeinc.open {
-	opacity: 1;
-	visibility: visible;
-	-webkit-transition: opacity 0.5s;
-	transition: opacity 0.5s;
-	z-index: 1000;
-}
-
-.overlay-hugeinc nav {
-	-webkit-perspective: 1200px;
-	perspective: 1200px;
-}
-
-.overlay-hugeinc nav ul {
-	opacity: 0.4;
-	-webkit-transform: translateY(-25%) rotateX(35deg);
-	transform: translateY(-25%) rotateX(35deg);
-	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
-	transition: transform 0.5s, opacity 0.5s;
-}
-
-.overlay-hugeinc.open nav ul {
-	opacity: 1;
-	-webkit-transform: rotateX(0deg);
-	transform: rotateX(0deg);
-}
-
-.overlay-hugeinc.close nav ul {
-	-webkit-transform: translateY(25%) rotateX(-35deg);
-	transform: translateY(25%) rotateX(-35deg);
-}
-
-@media screen and (max-height: 30.5em) {
-	.overlay nav {
-		height: 70%;
-		font-size: 34px;
-	}
-	.overlay ul li {
-		min-height: 34px;
-	}
+.icon-cancel:hover::before {
+  color: #3e19fc;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 /***** HOME *****/
@@ -444,7 +317,7 @@ h3 {
 }
 
 .work.rosario {
-    background-image: url("../images/work/rosario/rosario-341-open.jpg");
+    background-image: url("../images/work/rosario-341/rosario-341-open.jpg");
     background-position: center center;
 }
 
@@ -486,7 +359,7 @@ h3 {
   height: 500px;
   position: absolute;
   width: 100%;
-  background-image: url("../images/work/rosario/rosario-341-hero.jpg");
+  background-image: url("../images/work/rosario-341/rosario-341-hero.jpg");
   opacity: 0.8;
   background-position: center center;
 }
@@ -523,6 +396,7 @@ h3 {
 .briefing {
   width: 60%;
   float: left;
+  padding-left: 60px;
 }
 
 .briefing p {
@@ -533,11 +407,12 @@ h3 {
   width: 35%;
   float: right;
   text-align: right;
+  padding-right: 60px;
 }
 
 .project-images {
     float: left;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
     text-align: center;
     width: 100%;
 }
@@ -580,4 +455,53 @@ h3 {
     margin-top: 30px;
     width: 100%;
     height: auto;
+-moz-transition: opacity 2s; /* Firefox 4 */
+-webkit-transition: opacity 2s; /* Safari and Chrome */
+-o-transition: opacity 2s;
+transition: opacity 2s;
+}
+
+.footer {
+    float: left;
+    padding-bottom: 120px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer a {
+  color: #000;
+  position: relative;
+}
+
+.footer a::before {
+ background-color: #3e19fc;
+ content: "";
+ height: 2px;
+ left: 0;
+ position: absolute;
+ top: 50%;
+ width: 0;
+ -webkit-transition: all 0.2s ease;
+ -moz-transition: all 0.2s ease;
+ -ms-transition: all 0.2s ease;
+ -o-transition: all 0.2s ease;
+ transition: all 0.2s ease;
+}
+
+.footer a:hover::before {
+ width: 98%;
+}
+
+.footer a {
+    font-weight: 900;
+}
+
+.footer .links-container {
+    display: flex;
+    float: left;
+    justify-content: space-around;
+    padding-left: 60px;
+    padding-right: 60px;
+    width: 100%;
+    flex-flow: wrap;
 }
