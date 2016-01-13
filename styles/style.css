@@ -356,15 +356,15 @@ h3 {
     background-position: center center;
 }
 
-.work.pet4us .work-copy {
+.work.ophelia .work-copy {
   top: 50%;
   left: 50%;
   margin-left: -110px;
   margin-top: -15px;
 }
 
-.work.pet4us {
-    background-image: url("../images/work/pet4us/pet4us-open.jpg");
+.work.ophelia {
+    background-image: url("../images/work/ophelia/ophelia-open.jpg");
     background-position: center center;
 }
 
@@ -393,6 +393,15 @@ h3 {
   position: absolute;
   width: 100%;
   background-image: url("../images/work/idst/idst-hero.jpg");
+  opacity: 0.6;
+  background-position: center center;
+}
+
+.hero-image-ophelia {
+  height: 500px;
+  position: absolute;
+  width: 100%;
+  background-image: url("../images/work/ophelia/ophelia-hero.jpg");
   opacity: 0.6;
   background-position: center center;
 }
